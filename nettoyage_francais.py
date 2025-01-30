@@ -21,7 +21,6 @@ class NettoyageFrancais:
 			'u': ['Ã»', 'Ã¹'],
 			'c': ['Ã§'],
 			'-at-': ['@'],
-			'': ['Â©', ':', ',', 'Â®', '!', '?'],
 			'-': ["'", '"', '`', 'â€™'],
 			'o': ['Ã´'],
 			'et': ['&'],
@@ -29,7 +28,8 @@ class NettoyageFrancais:
 			'a': ['Ã ','Ã¢', 'Ã¡'],
 			'_': [' ']
 		}
-		self.grande_suppression = ['(', ')', '[', ']', '/']
+		# mise a part des suppressions, qui Ã©quivalent Ã  un remplacement par ''
+		self.grande_suppression = ['.', '(', ')', '[', ']', '/', 'Â©', ':', ',', 'Â®', '!', '?']
 		
 		# Log file name
 		self.log_file = 'nettoyage_francais_log.json'
