@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 ######################
-#	nettoyage Ã  la franÃ§aise d'une string XD
-#	par LAFONTAINE CÃ©dric Camille
+#	nettoyage à la française d'une string XD
+#	par LAFONTAINE Cédric Camille
 #
 #           _        _ _ _             ___     
 #  ___ ___ _| |___   | |_| |_ ___ ___  |  _|___ 
@@ -17,20 +17,20 @@ class NettoyageFrancais:
 	def __init__(self, input_string):
 		self.input_string = input_string
 		self.grand_remplacement = {
-			'e': ['Ã©', 'Ã¨', 'Ãª', 'Ã«'],
-			'u': ['Ã»', 'Ã¹', 'Âµ'],
-			'c': ['Ã§'],
+			'e': ['é', 'è', 'ê', 'ë'],
+			'u': ['û', 'ù', 'µ'],
+			'c': ['ç'],
 			'-at-': ['@'],
-			'-': ["'", '"', '`', 'â€™'],
-			'o': ['Ã´', 'Ã¶'],
+			'-': ["'", '"', '`', '’'],
+			'o': ['ô', 'ö'],
 			'et': ['&'],
-			'i': ['Ã®', 'Ã¯'],
-			'a': ['Ã ','Ã¢', 'Ã¡', 'Ã¤'],
-			'2': ['Â²'],
+			'i': ['î', 'ï'],
+			'a': ['à','â', 'á', 'ä'],
+			'2': ['²'],
 			'_': [' ']
 		}
-		# mise a part des suppressions, qui Ã©quivalent Ã  un remplacement par ''
-		self.grande_suppression = ['%', '.', '(', ')', '[', ']', '/', 'Â©', ':', ',', 'Â®', '!', '?', '+', '*', '#', '|', '{', '}', '=', ';', '<', '>']
+		# mise a part des suppressions, qui équivalent à un remplacement par ''
+		self.grande_suppression = ['%', '.', '(', ')', '[', ']', '/', '©', ':', ',', '®', '!', '?', '+', '*', '#', '|', '{', '}', '=', ';', '<', '>']
 		
 		# Log file name
 		self.log_file = 'nettoyage_francais_log.json'
