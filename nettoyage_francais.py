@@ -18,18 +18,19 @@ class NettoyageFrancais:
 		self.input_string = input_string
 		self.grand_remplacement = {
 			'e': ['Ã©', 'Ã¨', 'Ãª', 'Ã«'],
-			'u': ['Ã»', 'Ã¹'],
+			'u': ['Ã»', 'Ã¹', 'Âµ'],
 			'c': ['Ã§'],
 			'-at-': ['@'],
 			'-': ["'", '"', '`', 'â€™'],
-			'o': ['Ã´'],
+			'o': ['Ã´', 'Ã¶'],
 			'et': ['&'],
 			'i': ['Ã®', 'Ã¯'],
-			'a': ['Ã ','Ã¢', 'Ã¡'],
+			'a': ['Ã ','Ã¢', 'Ã¡', 'Ã¤'],
+			'2': ['Â²'],
 			'_': [' ']
 		}
 		# mise a part des suppressions, qui Ã©quivalent Ã  un remplacement par ''
-		self.grande_suppression = ['.', '(', ')', '[', ']', '/', 'Â©', ':', ',', 'Â®', '!', '?']
+		self.grande_suppression = ['%', '.', '(', ')', '[', ']', '/', 'Â©', ':', ',', 'Â®', '!', '?', '+', '*', '#', '|', '{', '}', '=', ';', '<', '>']
 		
 		# Log file name
 		self.log_file = 'nettoyage_francais_log.json'
